@@ -1,4 +1,4 @@
-name:  Deploy Resume to GitHub Pages
+name: Deploy Resume to GitHub Pages
 
 on:
   push:
@@ -11,14 +11,15 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload site files
+      - name: Upload Site Files
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./
